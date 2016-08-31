@@ -1,0 +1,22 @@
+{
+  "name": "bug",
+  "version": "1.0.0",
+  "description": "bug tracking system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/q1q1w1w1q/bugTrackingSystem.git"
+  },
+  "author": "Allen Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/q1q1w1w1q/bugTrackingSystem/issues"
+  },
+  "homepage": "https://github.com/q1q1w1w1q/bugTrackingSystem",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
