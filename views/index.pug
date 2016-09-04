@@ -14,6 +14,28 @@ html
 
   body
     h1= message
+    form
+      .form-group
+        label(for="title") title
+        input(type="text" class="form-control" id="title" placeholder="bug name" aria-describedby="basic-addon1")
+      .form-group
+        label(for=description) description
+        input(type="text" class="form-control" id="title"     placeholder="bug name" aria-describedby="basic-addon1")
+      .form-group
+        label(for="priority") priority
+        select(class="form-control" id="priority")
+          option critical
+          option high
+          option normal
+          option low
+      .form-froup
+        label(for="photo") upload photo
+        input(type="file" class="form-control-file" id="uploadPhoto")
+        small(class="form-text text-muted") upload the screenshot which shows the bug
+      br
+      button(type="submit" class="btn btn-promary") Submit
+
+
     <!-- Latest compiled and minified JavaScript -->
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
 
