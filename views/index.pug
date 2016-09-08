@@ -21,19 +21,16 @@ html
             span(class="icon-bar") ???
           a(class="navbar-brand" href="#") Findata
 
-
-
-
-    form
+    form(action="http://localhost:3000/createBugList" method="POST")
       .form-group
         label(for="title") title
-        input(type="text" class="form-control" id="title" placeholder="bug name" aria-describedby="basic-addon1")
+        input(type="text" class="form-control" name="title" placeholder="bug name" aria-describedby="basic-addon1")
       .form-group
         label(for=description) description
-        input(type="text" class="form-control" id="title"     placeholder="bug name" aria-describedby="basic-addon1")
+        input(type="text" class="form-control" name="description" placeholder="bug name" aria-describedby="basic-addon1")
       .form-group
         label(for="priority") priority
-        select(class="form-control" id="priority")
+        select(class="form-control" name="priority")
           option critical
           option high
           option normal

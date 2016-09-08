@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
+var formParser = bodyParser.urlencoded({ extended: false});
 
 app.use('/static', express.static('public'));
 app.set('views', './views');
@@ -10,7 +13,17 @@ app.get('/', function (req, res) {
   //res.send('Great to see you again, dude');
 });
 
+app.post('/createBugList', formParser, function(req, res){
+  console.log(req.body.description);
+  response = {
+    title:req.body.title,
+    text:req.body.text,
+    priority:req.body.priority
+  };
+  console.log(response);
+  res.end(JSON.stringify(response));
 
+})
 
 
 
