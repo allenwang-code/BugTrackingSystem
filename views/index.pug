@@ -16,31 +16,29 @@ html
     nav(class="navbar navbar-inverse")
       .container-fluid
         .navbar-header
-          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
-            span(class="sr-only") Toggle navigation
-            span(class="icon-bar") ???
           a(class="navbar-brand" href="#") Findata
 
-    form(action="http://localhost:3000/createBugList" method="POST")
-      .form-group
-        label(for="title") title
-        input(type="text" class="form-control" name="title" placeholder="bug name" aria-describedby="basic-addon1")
-      .form-group
-        label(for=description) description
-        input(type="text" class="form-control" name="description" placeholder="bug name" aria-describedby="basic-addon1")
-      .form-group
-        label(for="priority") priority
-        select(class="form-control" name="priority")
-          option critical
-          option high
-          option normal
-          option low
-      .form-froup
-        label(for="photo") upload photo
-        input(type="file" class="form-control-file" id="uploadPhoto")
-        small(class="form-text text-muted") upload the screenshot which shows the bug
-      br
-      button(type="submit" class="btn btn-promary") Submit
+    .container-fluid
+      form(action="http://localhost:3000/createBugList" method="POST")
+        .form-group
+          label(for="title") title
+          input(type="text" class="form-control" name="title" placeholder="bug name" aria-describedby="basic-addon1")
+        .form-group
+          label(for=description) description
+          input(type="text" class="form-control" name="description" placeholder="bug name" aria-describedby="basic-addon1")
+        .form-group
+          label(for="priority") priority
+          select(class="form-control" name="priority")
+            option critical
+            option high
+            option normal
+            option low
+        .form-froup
+          label(for="photo") upload photo
+          input(type="file" class="form-control-file" id="uploadPhoto")
+          small(class="form-text text-muted") upload the screenshot which shows the bug
+        br
+        button(type="submit" class="btn btn-promary") Submit
 
 
     <!-- Latest compiled and minified JavaScript -->

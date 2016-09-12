@@ -19,10 +19,11 @@ app.use('/static', express.static('public'))
 app.set('views', './views')
 app.set('view engine', 'pug')
 
-app.get('/', function (req, res) {
-  res.render('index', { title:'hey!', message:'Hi, There!'})
+//app.get('/', function (req, res) {
+//  res.render('index', { title:'hey!', message:'Hi, There!'})
   //res.send('Great to see you again, dude');
-})
+//})
+app.use('/', routes)
 
 app.post('/createBugList', function(req, res){
   console.log(req.body.description)
