@@ -15,6 +15,7 @@ app.use(jsonParser)
 app.use(logger('dev'))
 app.use(favicon(__dirname + "/public/favicon.ico"))
 app.use('/static', express.static('public'))
+app.use('/', routes)
 
 app.set('views', './views')
 app.set('view engine', 'pug')
@@ -22,8 +23,7 @@ app.set('view engine', 'pug')
 //app.get('/', function (req, res) {
 //  res.render('index', { title:'hey!', message:'Hi, There!'})
   //res.send('Great to see you again, dude');
-//})
-app.use('/', routes)
+//}))
 
 app.post('/createBugList', function(req, res){
   console.log(req.body.description)
@@ -36,7 +36,6 @@ app.post('/createBugList', function(req, res){
   res.end(JSON.stringify(response))
 
 })
-
 
 
 app.listen(3000, function() {
