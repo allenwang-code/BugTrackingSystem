@@ -5,6 +5,7 @@ var router = express.Router();
 // 	res.render("index", { title : 'Express', message: 'HI, again!' });
 // });
 
+/*
 module.exports = function(app) {
   app.get('/', function (req, res) {
     res.render('index', { title: '主页' });
@@ -27,3 +28,18 @@ module.exports = function(app) {
   app.get('/logout', function (req, res) {
   });
 }
+
+*/
+
+//module.exports = function(app) {
+//  app.get('/', function (req, res) {
+//    res.render('index', { title: 'Express' });
+//  });
+//};
+
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
+
